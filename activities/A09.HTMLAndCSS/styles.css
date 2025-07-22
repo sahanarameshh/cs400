@@ -1,0 +1,9 @@
+p {
+    color: red;
+}
+.headers {
+    color: blue;
+}
+#image {
+    max-width: 100%;
+}

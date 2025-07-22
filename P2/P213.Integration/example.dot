@@ -1,0 +1,7 @@
+digraph example {
+	"Memorial Union" -> "Science Hall" [seconds=105.8];
+	"Wendt Commons" -> "Union South" [seconds=32.3];
+	"Russell Laboratories" -> "D.C. Smith Greenhouse" [seconds=99.59999999999998];
+	"Lot 36 - Observatory Drive Ramp" -> "Steenbock Memorial Library" [seconds=113.29999999999998];
+	"DeLuca Biochemistry Laboratories" -> "Plant Sciences" [seconds=0];
+}

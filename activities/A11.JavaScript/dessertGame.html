@@ -1,0 +1,79 @@
+
+<html>
+  <head>
+    <title>Dessert in the Desert Browser Game</title>
+    <style>
+      button {
+        color: blanchedalmond;
+        background-color: chocolate;
+        border-color: chocolate;
+        position: absolute;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+      button:hover {
+        color: chocolate;
+        background-color: blanchedalmond;
+      }
+      p {
+        font-weight: 800;
+      }
+      body {
+        background-color: SandyBrown;
+      }
+    </style>
+    <script>
+        let score = 0;
+
+        function randomizeButtonPositions() {
+            let buttons = document.querySelectorAll("button");
+            buttons.forEach( (b) => {
+            b.style.left = (Math.random()*80+10)+"%";
+            b.style.top = (Math.random()*80+10)+"%";
+            } );
+        }
+
+        function handleDessertClick() {
+            randomizeButtonPositions();
+            score++;
+            document.querySelector("p").innerHTML = "Score: " + score;
+        }
+
+        function handleDesertClick() {
+            randomizeButtonPositions();
+            score--;
+            console.log(score);
+            document.querySelector("p").innerHTML = "Score: " + score;
+        }
+
+        window.onload = () => {
+            randomizeButtonPositions();
+            document.querySelector("p").innerHTML = "Score: " + score;
+
+            let dessertButton = document.querySelector("#dessertButton");
+            dessertButton.onclick = () => {
+                handleDessertClick(); 
+            };
+
+            let desertButton = document.querySelectorAll(".desertButtons");
+            desertButton.forEach( (button) => {
+                button.onclick = () => {
+                    handleDesertClick(); 
+                };
+            });
+        };
+    </script>
+    <meta name="author" content="ramesh37">
+  </head>
+  <body>
+    <p>Score: 0</p>
+    <button id="dessertButton">Dessert</button>
+
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+    <button class="desertButtons">Desert</button>
+  </body>
